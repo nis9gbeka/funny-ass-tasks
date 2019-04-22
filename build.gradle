@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.bexultan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile('org.springframework.session:spring-session-jdbc')
+	compile('org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.0.RELEASE')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.postgresql:postgresql')
+	compile('org.projectlombok:lombok')
+	compile('javax.xml.bind:jaxb-api')
+//	compile('com.sun.xml.bind:jaxb-core')
+//	compile('com.sun.xml.bind:jaxb-impl')
+}
